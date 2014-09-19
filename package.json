@@ -1,0 +1,36 @@
+{
+  "name": "multi-sprite",
+  "description": "Create multi-sprites and updates css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/twlk28/multi-sprite",
+  "author": {
+    "name": "twlk28",
+    "email": "twlk28@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twlk28/multi-sprite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twlk28/multi-sprite/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/adi/multi-sprite/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "spritesmith": "0.18.0",
+    "lodash": "~2.4.1",
+    "async": "~0.9.0",
+    "file": "~0.2.2"
+  },
+  "keywords": [
+    "sprite",
+    "css"
+  ]
+}
