@@ -29,8 +29,6 @@ module.exports = function (options) {
             exclude = [RETINA_SUFFIX, '.DS_Store', '.svn'],
             include = [RETINA_SUFFIX];
 
-        file.mkdirsSync(cssDestDIR)
-        file.mkdirsSync(spriteDestDIR)
         if(listDIR(spriteSrcDIR).length>0){
             spritelist = listDIR(spriteSrcDIR).map(function (itemDIR) {
                 var src = listFileExclude(path.join(spriteSrcDIR, itemDIR), exclude).map(function(sliceFile){
@@ -54,6 +52,8 @@ module.exports = function (options) {
 
         }
         if(listFileExclude(spriteSrcDIR, exclude).length>0){
+            file.mkdirsSync(cssDestDIR)
+            file.mkdirsSync(spriteDestDIR)
             var src = listFileExclude(spriteSrcDIR, exclude).map(function(sliceFile){
                 return path.join(spriteSrcDIR, sliceFile);
             })
@@ -234,7 +234,7 @@ module.exports = function (options) {
         }
         function calcCssSnippet(css, url, img, newPath){
             var regExp = new RegExp('background-image:[\\s]?url\\(["\']?'+url+'["\']?\\)', 'ig')
-            var pos = 'background-image:url("' + newPath +'"); background-position: -'+img.x+'px -'+img.y+'px;'
+            var pos = 'background-image:url("' + newPath +'"); background-position: -'+img.x+'px -'+img.y+'px'
             return css.replace(regExp, pos)
         }
         function calcRetinaCssSnippet(selectors, img, newPath){
