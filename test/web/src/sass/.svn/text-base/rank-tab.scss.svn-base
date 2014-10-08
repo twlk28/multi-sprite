@@ -1,0 +1,302 @@
+@import "base/variables";
+
+/* Tools */
+@import "tools/mixin";
+@import "tools/fonts";
+@import "tools/media";
+
+/* Base */
+@import "base/normalize";
+@import "base/base";
+
+/* Layout */
+@import "layout/topbar";
+@import "layout/bottombar";
+
+/* Modules */
+// @import "modules/form";
+// @import "modules/list";
+// @import "modules/piclist";
+// @import "modules/table";
+// @import "modules/button";
+// @import "modules/single";
+// @import "modules/toggle";
+
+/* Components */
+// @import "components/dropmenu";
+// @import "components/panel";
+// @import "components/refresh";
+// @import "components/scrolltop";
+// @import "components/slider";
+@import "components/tab";
+// @import "components/pop";
+
+
+/* 排行榜tab */
+.rank-tab{
+	padding: 0px;
+	.m-tab__cont__item{
+		width: 100%;
+	}
+	.hide{
+		display: none;
+	}
+}
+
+
+/* 排行榜section */
+.rank-ctn{
+	
+}
+
+.rank__hd{
+	background-color: #F5F5F5;
+	overflow: hidden;
+	.desc{
+		height: 30px;
+		line-height: 30px;
+		font-size: pxToRem(12);
+		color: #999999;
+		margin: 0 20px;
+		padding-left: 10px;
+		position: relative;
+		&::before{
+			content:"";
+			background-image: url("../img/icon-map.png");
+			background-position: 0px 0px;
+			background-repeat: no-repeat;
+			width: 7px;
+			height: 10px;
+			position: absolute;
+			top: 50%;
+			left: 0px;
+			margin-top: -5px;
+			background-size: 400px 400px;
+		}
+	}
+}
+
+.rank__myposition{
+	padding: 10px 0 10px 105px;
+	height: 50px;
+	position: relative;
+	background-color: #FFFFFF;
+	margin-bottom: 9px;
+	.avator{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 10px;
+		left: 44px;
+	}
+	.name{
+		font-size: pxToRem(15);
+		line-height: 50px;
+		@include ellipsis();
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding-right: 5em;
+	}
+	&::after{
+		content:attr(data-rank);
+		position: absolute;
+		top: 10px;
+		right: 1em;
+		font-size: pxToRem(15);
+		height: 50px;
+		line-height: 50px;
+	}
+
+}
+
+/* 排行榜位置 */
+.ranking-ctn{
+	height: 98px;
+	background-color: #1E232F;
+	overflow: hidden;
+	position: relative;
+	.rank-num{
+		margin-top: 10px;
+		text-align: center;
+		font-size: 28px;
+		color: #F8A301;
+		height: 40px;
+		line-height: 40px;
+		display: block;
+	}
+	h2{
+		width: 185px;
+		height: 28px;
+		margin: 0 auto;
+		background-image: url("../img/icon-map.png");
+		background-position: 0px -15px;
+		background-repeat: no-repeat;
+		background-size: 400px 400px;
+		line-height: 24px;
+		text-align: center;
+		font-size: 12px;
+		color: #785300;
+		position: relative;
+		z-index: 5;
+	}
+	.tag{
+		background-image: url("../img/icon-map.png");
+		background-position: 0px -100px;
+		background-repeat: no-repeat;
+		background-size: 400px 400px;
+		width: 99px;
+		height: 79px;
+		position: absolute;
+		bottom:0px;
+		right: 0px;
+	}
+	.tag--topten{
+		background-position: 0px -100px;
+	}
+	.tag--goon{
+		background-position: -100px -100px;
+	}
+	.tag--tophun{
+		background-position: -200px -100px;
+	}
+}
+
+/* 排行列表 */
+.rank-list{
+	border-top: 1px solid #ECECEC;
+	li{
+		padding: 10px 0 10px 105px;
+		height: 50px;
+		position: relative;
+		background-color: #FFFFFF;
+		border-bottom: 1px solid #ECECEC;
+		.avator{
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 10px;
+			left: 44px;
+		}
+		.name{
+			font-size: pxToRem(15);
+			line-height: 50px;
+			@include ellipsis();
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+			padding-right: 5em;
+		}
+		&::after{
+			content:attr(data-rank);
+			position: absolute;
+			top: 10px;
+			right: 1em;
+			font-size: pxToRem(15);
+			height: 50px;
+			line-height: 50px;
+		}
+	}
+	.rank-top{
+		&::before{
+			content:"";
+			width: 24px;
+			height: 28px;
+			background-image: url("../img/icon-map.png");
+			background-position: 0px -50px;
+			background-repeat: no-repeat;
+			background-size: 400px 400px;
+			overflow: hidden;
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			margin-top: -14px;
+		}		
+	}
+	.rank-top__top1{
+		&::before{
+			background-position: 0 -50px;
+			background-size: 400px 400px;
+		}
+	}
+	.rank-top__top2{
+		&::before{
+			background-position: -30px -50px;
+			background-size: 400px 400px;
+		}
+	}
+	.rank-top__top3{
+		&::before{
+			background-position: -60px -50px;
+			background-size: 400px 400px;
+		}
+	}
+}
+
+	/*下载推广位置添加*/
+	.promote-topbar{
+		border-bottom: 1px solid #C4C4C4;
+		background-color: #F5F5F5;
+	}
+	.promote-topbar>a{
+		position: relative;
+		padding: 10px 75px 10px 74px;
+		position: relative;;
+		display: block;
+		height: 55px;
+	}
+
+	.promote-topbar>a::before{
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		width: 48px;
+		height: 55px;
+		margin-top: -28px;
+		background-image: url(../img/icon-lolapp.png);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		content: "";
+	}
+	.promote-topbar>a h2{
+		font-size: 14px;
+		color: #333333;
+		padding-top: 10px;
+	}
+
+	.promote-topbar>a p{
+		font-size: 12px;
+		color: #999999;
+	}
+
+	.promote-topbar .download{
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		height: 30px;
+		width: 60px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff;
+		font-size: 14px;
+		margin-top: -15px;
+		background-color: #78BB18;
+		-webkit-border-radius: 4px;
+		        border-radius: 4px;
+	}
+
+	.promote-topbar .download:active{
+		background-color: #69A512;
+	}
+
+	.promote-topbar .download::before{
+		content: "";
+		background-image: url(../img/icon-download.png);
+		background-repeat: no-repeat;;
+		background-position: 0 0;
+		background-size: 100%;
+		display: inline-block;
+		height: 14px;
+		width: 14px;
+	}

@@ -182,7 +182,7 @@ module.exports = function (options) {
     var _insertSprites = function (css) {
 
         var retinaCssSnippetBanner = (function(){/*
-         @media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio: 1.5),only screen and (min-resolution: 240dpi) {
+         @media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx),only screen and (min-resolution: 240dpi) {
          */}).toString().split('\n').slice(1, -1).join('\n');
         var retinaCssSnippetFooter = (function(){/*
          }

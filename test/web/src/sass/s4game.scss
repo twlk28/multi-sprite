@@ -1,0 +1,112 @@
+@import "base/variables";
+
+/* Tools */
+@import "tools/mixin";
+@import "tools/fonts";
+@import "tools/media";
+
+/* Base */
+@import "base/normalize";
+@import "base/base";
+
+/* Layout */
+@import "layout/topbar";
+@import "layout/bottombar";
+
+/* Modules */
+// @import "modules/form";
+// @import "modules/list";
+// @import "modules/piclist";
+@import "modules/table";
+// @import "modules/button";
+// @import "modules/single";
+// @import "modules/toggle";
+
+/* Components */
+// @import "components/dropmenu";
+// @import "components/panel";
+// @import "components/refresh";
+// @import "components/scrolltop";
+// @import "components/slider";
+// @import "components/tab";
+// @import "components/pop";
+
+
+/* private utils */
+@mixin slice($slice_url, $default_pos:true){
+  background-image: url($slice_url); background-repeat: no-repeat; 
+  @if($default_pos){display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center;}
+}
+@mixin lego($code){font-family: lego;}
+
+.icon-play{@include slice('../slice/s4game/icon-play.png');}
+.icon-play-live{@include slice('../slice/s4game/icon-play-live.png');}
+.icon-play-disable{@include slice('../slice/s4game/icon-play-disable.png');}
+.icon-play2{@include slice('../slice/s4game/icon-play2.png'); width: 16px; height: 12px;}
+.icon-vs{@include slice('../slice/s4game/icon-vs.png'); width: 11px; height: 14px;}
+.label-gray, .label-green { padding: 1px 1px 0; margin-right: 4px; background: #00CB5E; border-radius: 3px; color: #fff; font-size: 9px; margin-bottom: 4px; display: inline-block; vertical-align: middle; }
+.label-gray{@extend .label-green; background: #aaa; }
+
+/* livelist */
+.live{}
+.live__title{height: 30px; line-height: 30px; text-align: center; font-size: 14px; color: #fff; background: #3F618C;}
+.live__item:nth-child(even){background: #F0F3F7;}
+
+/* liveitem */
+.card{display: flex; align-items:center; box-sizing: border-box; padding: 15px; color: #999; font-size: 12px;}
+.card__main{width: 75%; margin-right: 5%;}
+.card__sub{width: 20%; display: block; text-align: center;}
+.card__vs{font-size: 16px; color: #333;}
+.card__title{margin-top: 8px; font-size: 12px; line-height: 12px; @include ellipsis;}
+.card__title .i-clock { margin-top: 3px; display: inline-block; vertical-align: bottom; line-height: 10px; font-size: 10px; text-rendering: auto;}
+.card__play{width: 22px; height: 16px;}
+.card__playdesc{margin-top: 2px;}
+
+.card__sub--normal{color:#43638A;}
+.card__sub--normal .card__play{@extend .icon-play;}
+.card__sub--living{color:#FFA63A;}
+.card__sub--living .card__play{@extend .icon-play-live;}
+.card__sub--disable{color:#999;}
+.card__sub--disable .card__play{@extend .icon-play-disable; }
+
+/* hili */
+.win{margin-bottom: 10px; text-align: center; font-size: 14px; color: #333;}
+.win__title{@extend .live__title; }
+.win__th{display: flex; align-items:center; height: 35px; line-height: 35px; background: #F0F3F7; color: #666;}
+.win__list{ }
+.win__item{display: flex; align-items:center; padding-top: 10px; padding-bottom: 10px; word-wrap: break-word;}
+.win__item:nth-child(even){background: #F0F3F7;}
+.win__v{margin-bottom: 4px;}
+.win__s{margin-top: 4px;}
+.win__play{width: 22px; height: 16px;}
+.win__playdesc{font-size: 12px;}
+.win .col1{width: 35%; }
+.win .col2{width: 25%; }
+.win .col3{width: 20%; }
+.win .col4{width: 20%; display: block;}
+.win__col4--normal{color:#43638A;}
+.win__col4--normal .win__play{@extend .icon-play;}
+.win__col4--living{color:#FFA63A;}
+.win__col4--living .win__play{@extend .icon-play-live;}
+.win__col4--disable{color:#999;}
+.win__col4--disable .win__play{@extend .icon-play-disable;}
+/*.win .col1{width: 40%; display: inline-block;}
+.win .col2{width: 20%; display: inline-block;}
+.win .col3{width: 20%; display: inline-block;}
+.win .col4{width: 20%; display: inline-block;}*/
+
+.group{@extend .win;}
+.group__title{@extend .win__title;}
+.group__th{@extend .win__th; padding-left: 10px;}
+.group__item{@extend .win__item; padding-left: 10px;}
+.group__item:nth-child(even){background: #F0F3F7;}
+
+
+.group .col1{width: 35%; text-align: left; @include ellipsis;}
+.group .col2{width: 12%;}
+.group .col3{width: 12%;}
+.group .col4{width: 12%;}
+.group .col5{width: 12%;}
+.group .col6{width: 17%; display: block;}
+
+

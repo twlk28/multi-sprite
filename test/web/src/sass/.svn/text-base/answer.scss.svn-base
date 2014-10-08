@@ -1,0 +1,239 @@
+@import "base/variables";
+
+/* Tools */
+@import "tools/mixin";
+@import "tools/fonts";
+@import "tools/media";
+
+/* Base */
+@import "base/normalize";
+@import "base/base";
+
+/* Layout */
+@import "layout/topbar";
+@import "layout/bottombar";
+
+/* Modules */
+// @import "modules/form";
+// @import "modules/list";
+// @import "modules/piclist";
+// @import "modules/table";
+// @import "modules/button";
+// @import "modules/single";
+// @import "modules/toggle";
+
+/* Components */
+// @import "components/dropmenu";
+// @import "components/panel";
+// @import "components/refresh";
+// @import "components/scrolltop";
+// @import "components/slider";
+// @import "components/tab";
+// @import "components/pop";
+
+body{
+	background-image: url("../img/bg-answer-repeat.png");
+	background-position: 0px 0px;
+	background-repeat: repeat;
+	background-size: 50px 28px;
+	
+}
+
+.answer-ctn{
+	background-image: url("../img/bg-anwser.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	width:100%;
+	background-size: 320px 502px;
+	padding-bottom: 20px;
+}
+
+.answer-bd{
+	width:270px;
+	margin: 0 auto;
+	padding-top: 128px;
+}
+
+.answer-start{
+	overflow: hidden;
+	padding: 0 25px;
+	h2{
+		text-align: center;
+		line-height: 1.1em;
+		font-size: pxToRem(20);
+		color: #3F5A77;
+		font-weight: bold;
+		margin-top: 20px;
+		margin-bottom: 5px;
+		em{
+			display: block;
+			font-size: pxToRem(10);
+			color: #999;
+			line-height: 1.1em;
+		}
+	}
+	.desc{
+		text-indent: 2em;
+		line-height: 22px;
+		color: #333;
+		font-size: pxToRem(14);
+	}
+	.get-start{
+		display: block;
+		width: 180px;
+		height: 50px;
+		background-color: #295FA0;
+		border-bottom:5px solid #295FA0;
+		border-radius: 7px;
+		margin: 38px auto 0 auto;
+		span{
+			display: block;
+			line-height: 50px;
+			font-size: pxToRem(20);
+			font-weight: bold;
+			color: #fff;
+			background-color: #397ACB;
+			text-align: center;
+			border-radius: 7px;
+			&::after{
+				content: "";
+				background-image: url("../img/icon-map.png");
+				background-position: 0px -190px;
+				background-repeat: no-repeat;
+				background-size: 400px 400px;
+				height: 22px;
+				width: 22px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 10px;
+			}
+		}
+	}
+	.get-start:active{
+		background-color: #224B80;
+		border-color: #224B80;
+		span{
+			background-color: #2D62A2;
+			color: #EBF4FF;
+		}
+	}
+}
+
+/* 答题结束 */
+.answer-end{
+	color:#333;
+	overflow: hidden;
+	background-image: url("../img/bg-answer-repeaty.png");
+	background-position: 0px 63px;
+	background-repeat: repeat-y;
+	background-size: 270px 20px;
+	.score-num{
+		font-size: 50px;
+		color: #C54D46;
+		font-weight: bold;
+		text-align: center;
+		display: block;
+		line-height: 1em;
+		padding-bottom: 36px;
+		position: relative;
+		margin-top: 3px;
+		&::before{
+			content:"";
+			width: 137px;
+			height: 36px;
+			background-image: url("../img/icon-map.png");
+			background-position: -90px -50px;
+			background-size: 400px 400px;
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			margin-left: -68px;
+		}
+	}
+	.score-desc,.cont{
+		line-height: 22px;
+		padding: 0 25px;
+		font-size: pxToRem(14);
+	}
+	.score-desc{
+		padding: 10px 25px 5px 25px;
+	}
+	.share{
+		width: 168px;
+		height: 75px;
+		background-image: url("../img/icon-map.png");
+		background-position: -30px -190px;
+		background-repeat: no-repeat;
+		background-size: 400px 400px;
+		margin: 10px auto 15px auto;
+	}
+}
+
+/* 问答题目 */
+.answer-test{
+	color:#333;
+	overflow: hidden;
+	background-image: url("../img/bg-answer-repeaty.png");
+	background-position: 0px 63px;
+	background-repeat: repeat-y;
+	background-size: 270px 20px;
+	padding-bottom: 30px;
+	.title-num{
+		display: block;
+		font-size: 35px;
+		color: #3F5A77;
+		font-weight: bold;
+		line-height: 1.1em;
+		margin: 20px 0 10px 0;
+		text-align: center;
+	}
+	.cont{
+		padding: 0 25px;
+		font-size: pxToRem(14);
+		line-height: 22px;
+		text-indent: 2em;
+	}
+	.radio-list{
+		margin-top: 15px;
+		padding: 0 25px;
+		li{
+			height: 22px;
+			line-height: 22px;
+			padding-left: 32px;
+			position: relative;
+			margin-bottom: 12px;
+		}
+		li.selected{
+			.radio{
+				&::before{
+					content: "";
+					display: block;
+				}
+			}
+		}
+		.radio{
+			height: 20px;
+			width: 20px;
+			border: 1px solid #999999;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			border-radius: 10px;
+			&::before{
+				content: "";
+				height: 14px;
+				width: 14px;
+				display: block;
+				margin: 3px 0 0 3px;
+				background-color: #3F5A77;
+				border-radius: 7px;
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
