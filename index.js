@@ -1,6 +1,7 @@
 var spritesmith = require('spritesmith'),
     fs = require('fs'),
     path = require('path'),
+    file = require('file'),
     _ = require('lodash'),
     glob = require('glob'),
     async = require('async'),
@@ -43,6 +44,9 @@ module.exports = function (options) {
             css.dest = path.join(cssDestDIR, itemFile)
             return css
         })
+
+        file.mkdirsSync(cssDestDIR)
+        file.mkdirsSync(spriteDestDIR)
 
         // utils
         function dir2config(dir) {
@@ -142,7 +146,7 @@ module.exports = function (options) {
 
         var cssSnippetBanner2x = (function(){/*
 
-         @media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx),only screen and (min-resolution: 240dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),only screen and (min--moz-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx),only screen and (min-resolution: 240dpi) {
          */}).toString().split('\n').slice(1, -1).join('\n');
         var cssSnippetFooter2x = (function(){/*
          }
@@ -152,7 +156,7 @@ module.exports = function (options) {
 
         var cssSnippetBanner3x = (function(){/*
 
-         @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) {
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) {
          */}).toString().split('\n').slice(1, -1).join('\n');
         var cssSnippetFooter3x = (function(){/*
          }

@@ -59,16 +59,16 @@ multiSprite(ops)
 //})
 
 
-var imageReplaces = {
-    "/users/adi/duowan/github/multi-sprite/test/web/src/slice/s4game/icon-play-disable@2x.png":{
-        height: 32,
-        width: 44,
-        sprite: "/Users/adi/duowan/github/multi-sprite/test/web/dest/img/sprite/s4game@2x.png",
-        spriteWidth: 128,
-        x: 0,
-        y: 0
-    }
-}
+//var imageReplaces = {
+//    "/users/adi/duowan/github/multi-sprite/test/web/src/slice/s4game/icon-play-disable@2x.png":{
+//        height: 32,
+//        width: 44,
+//        sprite: "/Users/adi/duowan/github/multi-sprite/test/web/dest/img/sprite/s4game@2x.png",
+//        spriteWidth: 128,
+//        x: 0,
+//        y: 0
+//    }
+//}
 
 
 
