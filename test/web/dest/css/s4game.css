@@ -389,9 +389,3 @@ padding: 0.5em 1em; /* cell padding */ }
 .icon-play-disable, .card__sub--disable .card__play, .win__col4--disable .win__play {background-image:url("../img/sprite/s4game@2x.png");background-position: -0px -30px; background-size: 22px; }
 .icon-play2 {background-image:url("../img/sprite/s4game@2x.png");background-position: -0px -0px; background-size: 22px; }
 .icon-vs {background-image:url("../img/sprite/s4game@2x.png");background-position: -0px -14px; background-size: 22px; }     }
-     @media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3) {
-.icon-play, .card__sub--normal .card__play, .win__col4--normal .win__play {background-image:url("../img/sprite/s4game@3x.png");background-position: -0px -24.666666666666668px; background-size: 7.333333333333333px; }
-.icon-play-live, .card__sub--living .card__play, .win__col4--living .win__play {background-image:url("../img/sprite/s4game@3x.png");background-position: -0px -18px; background-size: 7.333333333333333px; }
-.icon-play-disable, .card__sub--disable .card__play, .win__col4--disable .win__play {background-image:url("../img/sprite/s4game@3x.png");background-position: -0px -11.333333333333334px; background-size: 7.333333333333333px; }
-.icon-play2 {background-image:url("../img/sprite/s4game@3x.png");background-position: -0px -0px; background-size: 7.333333333333333px; }
-.icon-vs {background-image:url("../img/sprite/s4game@3x.png");background-position: -0px -5.333333333333333px; background-size: 7.333333333333333px; }     }
