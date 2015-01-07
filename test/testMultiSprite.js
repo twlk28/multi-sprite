@@ -17,7 +17,7 @@ var ops = {
     // Address of target image's folder, target image's name = source folder's name
     destImg: 'test/web/dest/img/sprite',
     // OPTIONAL: Image placing algorithm: top-down, left-right, diagonal, alt-diagonal, binary-tree
-    'algorithm': 'binary-tree',
+    'algorithm': 'top-down',
     // OPTIONAL: Padding between imagesm
     'padding': 4,
     // OPTIONAL: Rendering engine: auto, canvas, gm
