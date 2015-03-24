@@ -1,7 +1,7 @@
 {
   "name": "multi-sprite",
   "description": "Create multi-sprites and updates css, support 2x 3x sprite generator",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/twlk28/multi-sprite",
   "author": {
     "name": "twlk28",
@@ -33,5 +33,8 @@
   "keywords": [
     "sprite",
     "css"
-  ]
+  ],
+  "devDependencies": {
+    "css": "^2.1.0"
+  }
 }
