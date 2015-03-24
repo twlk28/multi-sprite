@@ -1,7 +1,7 @@
 {
   "name": "multi-sprite",
   "description": "Create multi-sprites and updates css, support 2x 3x sprite generator",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/twlk28/multi-sprite",
   "author": {
     "name": "twlk28",
