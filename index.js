@@ -27,7 +27,7 @@ module.exports = function (options) {
                 console.log('[Created] -->'+sprite)
                 var tmpResult = result.coordinates
                 for (var key in result.coordinates) {
-                    var newKey = path.relative(options.srcCss, key).toLowerCase();
+                    var newKey = path.relative(options.srcCss, key);
                     imageReplaces[ newKey ] = tmpResult[ key ];
                     imageReplaces[ newKey ].sprite = path.relative(path.join(process.cwd(), options.destCss), sprite).replace(/\\/ig, '/');
                     imageReplaces[ newKey ].spriteWidth = size.width;
