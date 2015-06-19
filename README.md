@@ -4,17 +4,7 @@
 
 
 ##安装
-使用 [spritesmith][1] 作为核心算法，需 [安装依赖][2]：
-
-* **Graphics Magick(gm)**
-	* Mac:  `brew install GraphicsMagick`
-	
-  	* Win: [下载安装GM图形库][3]
-
-* **PhantomJS**
-	* Mac: `brew install phantomjs`
-
-  	* Win: [下载安装Phantomjs][4]
+`npm install multi-sprite`
 
 ## 使用
 `require('multi-sprite')(configs)`
