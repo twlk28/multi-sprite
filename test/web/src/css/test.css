@@ -2,3 +2,7 @@
 .label{ background-image: url(../slice/label.png); width: 40px; height: 40px; background-repeat: no-repeat;}
 
 .dib{ display: inline-block;}
+
+
+.img1{ background-image: url(../slice/jpg/img1.jpg); width: 80px; height: 80px; background-repeat: no-repeat;}
+.img2{ background-image: url(../slice/jpg/img2.jpg); width: 80px; height: 80px; background-repeat: no-repeat;}

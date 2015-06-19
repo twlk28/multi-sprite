@@ -2,8 +2,7 @@ var spritesmith = require('spritesmith'),
     fs = require('fs'),
     path = require('path'),
     _ = require('lodash'),
-    async = require('async'),
-    gm = require('spritesmith/node_modules/gmsmith/node_modules/gm');
+    async = require('async')
 
 var getConfig = require('./lib/getConfig'),
     updateCss = require('./lib/updateCss');
@@ -22,18 +21,16 @@ module.exports = function (options) {
         spritesmith(config, function (err, result) {
             if (err) { console.error(err); process.abort(); return callback(err); }
             fs.writeFile(sprite, result.image, { encoding: 'binary' })
-            gm(sprite).size(function(err, size){
-                if(err){ console.error(err); process.abort(); return;}
-                console.log('[Created] -->'+sprite)
-                var tmpResult = result.coordinates
-                for (var key in result.coordinates) {
-                    var newKey = path.relative(options.srcCss, key);
-                    imageReplaces[ newKey ] = tmpResult[ key ];
-                    imageReplaces[ newKey ].sprite = path.relative(path.join(process.cwd(), options.destCss), sprite).replace(/\\/ig, '/');
-                    imageReplaces[ newKey ].spriteWidth = size.width;
-                }
-                callback(false);
-            })
+            console.log('[Created] -->'+sprite)
+
+            var tmpResult = result.coordinates
+            for (var key in result.coordinates) {
+                var newKey = path.relative(options.srcCss, key);
+                imageReplaces[ newKey ] = tmpResult[ key ]
+                imageReplaces[ newKey ].sprite = path.relative(path.join(process.cwd(), options.destCss), sprite).replace(/\\/ig, '/')
+                imageReplaces[ newKey ].spriteWidth = result.properties.width
+            }
+            callback(false)
 
         });
 

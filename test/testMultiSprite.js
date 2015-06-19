@@ -21,14 +21,14 @@ var ops = {
     // OPTIONAL: Padding between imagesm
     'padding': 4,
     // OPTIONAL: Rendering engine: auto, canvas, gm
-    'engine': 'gm',
+    //'engine': 'gm',
     // OPTIONAL: Preferences for resulting image
-    'exportOpts': {
-        // Image format (by default will use png)
-        'format': 'png',
-        // Quality of image (gm only)
-        'quality': 90
-    },
+    //'exportOpts': {
+    //    // Image format (by default will use png)
+    //    'format': 'png',
+    //    // Quality of image (gm only)
+    //    'quality': 90
+    //},
     successCB: function () {
         log('all done!')
     }
