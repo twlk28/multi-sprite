@@ -10,11 +10,7 @@ var getConfig = require('./lib/getConfig'),
 module.exports = function (options) {
     "use strict";
 
-    var successCB = options.successCB || function(){}
-    var configs = getConfig(options)
-    var imageReplaces = {}
-
-    // Sprite creating function
+    var imageReplaces = {rootFontSize: options.rootFontSize||750/16}
     function _spriteSmithWrapper(config, callback) {
         var sprite = config.dest;
         delete config.sprite;
@@ -37,6 +33,8 @@ module.exports = function (options) {
     }
 
     // main
+    var successCB = options.successCB || function(){}
+    var configs = getConfig(options)
     async.eachSeries(configs, _spriteSmithWrapper, function(err){
         for (var j = 0; j < csslist.length; j++) {
             updateCss(csslist[j], imageReplaces);

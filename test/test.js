@@ -8,6 +8,7 @@ module.exports = {
         this.CONST.SUFFIX_2X = '@2x'
         this.CONST.SUFFIX_3X = '@3x'
         this.options = {
+            rootFontSize: 640/16,
             srcCss: 'test/web/src/css',
             srcImg: 'test/web/src/slice',
             destCss: 'test/web/dest/css',

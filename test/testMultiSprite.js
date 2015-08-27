@@ -9,6 +9,7 @@ var multiSprite = require('./../index')
  * cd multi-sprite/test/ ,then exec 'node testMultiSprite'
  */
 var ops = {
+    rootFontSize: 640/16,
     srcCss: 'test/web/src/css',
     // List of images to add to sprite (each sub-folder generate 1 image)
     srcImg: 'test/web/src/slice',
