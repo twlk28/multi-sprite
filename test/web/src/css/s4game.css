@@ -1,3 +1,10 @@
+/*!
+ * @project : 1440385869983
+ * @version : 1.0.0
+ * @author  : adi
+ * @update  : 2015-08-28 4:44:03 pm
+ */
+
 /* CSS3 Keyframes */
 /* Tools */
 /* 字体大小变量 */
@@ -333,7 +340,7 @@ padding: 0.5em 1em; /* cell padding */ }
 .icon-play, .card__sub--normal .card__play, .win__col4--normal .win__play { background-image: url('../slice/s4game/icon-play.png'); background-repeat: no-repeat; display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center; /* width: 22px; height: 16px;  */ }
 .icon-play-live, .card__sub--living .card__play, .win__col4--living .win__play { background-image: url('../slice/s4game/icon-play-live.png'); background-repeat: no-repeat; display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center; }
 .icon-play-disable, .card__sub--disable .card__play, .win__col4--disable .win__play { background-image: url('../slice/s4game/icon-play-disable.png'); background-repeat: no-repeat; display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center; }
-.icon-play2 { background-image: url('../slice/s4game/icon-play2.png'); background-repeat: no-repeat; display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center; width: 16px; height: 12px; }
+.icon-play2 { background-image: url('../slice/s4game/icon-play2.png'); background-repeat: no-repeat; display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center; width: 16rem; height: 12px; }
 .icon-vs { background-image: url('../slice/s4game/icon-vs.png'); background-repeat: no-repeat; display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; text-align: center; width: 11px; height: 14px; }
 .label-gray, .label-green, .label-gray { padding: 1px 1px 0; margin-right: 4px; background: #00CB5E; border-radius: 3px; color: #fff; font-size: 9px; margin-bottom: 4px; display: inline-block; vertical-align: middle; }
 .label-gray { background: #aaa; }

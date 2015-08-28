@@ -1,7 +1,7 @@
 {
   "name": "multi-sprite",
   "description": "Create multi-sprites and updates css, support 2x 3x sprite generator",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "homepage": "https://github.com/twlk28/multi-sprite",
   "author": {
     "name": "twlk28",
@@ -25,9 +25,10 @@
   },
   "dependencies": {
     "async": "~0.9.0",
+    "clean-css": "^3.0.10",
     "file": "^0.2.2",
     "glob": "^4.3.2",
-    "lodash": "~2.4.1",
+    "lodash": "^3.10.1",
     "spritesmith": "^1.3.2"
   },
   "keywords": [
